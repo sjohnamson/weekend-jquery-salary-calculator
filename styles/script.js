@@ -46,9 +46,17 @@ function handleSubmit(event) {
   if (totalMonthlySalary > 20000) {
     $('#monthlySalary').css('background-color', 'red')
   }
+
+
 }
 
-// function to delete rows when remove button is clicked
+// function to delete rows and subtract salary when remove button is clicked
 function handleDelete() {
-$(this).parent().parent().remove();
+// remove row
+$(this).closest('tr').remove();
+
+// subtract from total monthly salary
+const toSubtract = $(this).closest('tr').find('td:eq(4)').text();
+totalMonthlySalary -= toSubtract/12
+$('#monthlySalary').text(totalMonthlySalary);
 }
