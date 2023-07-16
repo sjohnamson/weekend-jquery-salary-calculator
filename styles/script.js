@@ -61,8 +61,8 @@ function handleDelete() {
   $(this).closest('tr').remove();
 
   // subtract from total monthly salary
-
   const toSubtract = $(this).closest('tr').find('td:eq(4)').text();
+  
   // find monthly amount to subtract
   totalMonthlySalary -= Number(toSubtract.replaceAll(",", "")) / 12;
 
