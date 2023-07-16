@@ -1,6 +1,7 @@
 $(document).ready(onReady);
 
 let totalMonthlySalary = 0;
+const numFor = Intl.NumberFormat('en-US');
 
 function onReady() {
 // submit button listener
@@ -47,14 +48,12 @@ function handleSubmit(event) {
     $('#monthlySalary').css('background-color', 'red')
     }
   // turn totalMonthlySalary into a string with commas
-  totalMonthlySalary = totalMonthlySalary.toLocaleString("en-US");
+  totalMonthlySalary = numFor.format(totalMonthlySalary);
   console.log('total monthly convert to string after add:', totalMonthlySalary)
   // input totalMonthlySalary into monthlySalary
   $('#monthlySalary').text(totalMonthlySalary);
   // convert totalMonthly salery back into a number for next input
   totalMonthlySalary = Number(totalMonthlySalary.replaceAll(",", ""));
-  console.log(totalMonthlySalary)
-
 }
 
 // function to delete rows and subtract salary when remove button is clicked
@@ -72,7 +71,7 @@ function handleDelete() {
     $('#monthlySalary').css('background-color', 'darksalmon')
     }
   // turn totalMonthlySalary back into a string with commas
-  totalMonthlySalary = totalMonthlySalary.toLocaleString("en-US");
+  totalMonthlySalary = numFor.format(totalMonthlySalary);
   console.log('total monthly back to string: ', totalMonthlySalary)
   // replace monthlySalary with new value
   $('#monthlySalary').text(totalMonthlySalary);
