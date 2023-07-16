@@ -2,105 +2,121 @@
 body {
     background-color: darksalmon;
     font-family: 'Roboto', sans-serif;
-    color:#4b4949;
+    color: #4b4949;
     font-size: 1em;
-  }
-  
-    
-  /* FLEXBOX LAYOUT */
-  html, body {
+}
+
+
+/* FLEXBOX LAYOUT */
+html,
+body {
     min-height: 100vh;
     margin: auto;
-  }
-  body {
+}
+
+body {
     display: flex;
     flex-direction: column;
-  }
-  header {
+}
+
+header {
     background-color: #4b4949;
     text-align: center;
     margin-bottom: 20px;
-  }
-  main {
+}
+
+main {
     flex: auto;
     max-width: 80%;
     margin: auto;
     min-width: 600px;
-  }
-  footer {
+}
+
+footer {
     height: 8em;
     background-color: #4b4949;
     text-align: center;
-  }
-  
-  
-  /* HEADER*/
-  header{
+}
+
+
+/* HEADER*/
+header {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  h1 {
+}
+
+h1 {
     font-size: 2.5em;
     color: darksalmon
-  }
-  
-  
-  /* FORM ELEMENTS */
-  input {
+}
+
+
+/* FORM ELEMENTS */
+input {
     padding: .5em;
     margin: 1em;
     width: 150px;
     background: #FCFCFC;
     border: 1px solid;
-  }
-  button {
+}
+
+button {
     padding: .25em;
     width: 100px;
     border-radius: 25px;
-    background-color:rgb(35, 220, 223);
-    color:black;
+    background-color: rgb(35, 220, 223);
+    color: black;
     margin: .5em;
     font-size: 1em;
-  }
-  
-  
-  /* TABLE */
-  table {
+}
+
+
+/* TABLE */
+table {
     width: 100%;
     text-align: center;
-  }
-  table {
+}
+
+table {
     border: 2px solid black;
-  }
-    th, td {
+}
+
+th,
+td {
     border: 1px solid #4b4949;
     border-collapse: collapse;
     height: 2em;
-  }
+}
 
-  th, td {
-    padding:.25em;
+th,
+td {
     min-width: 3em;
-  }
-  thead {
+}
+
+thead {
     background: #4b4949;
     color: #f2d5d5;
-  }
-  tbody tr:nth-child(odd){ 
+}
+
+tbody tr:nth-child(odd) {
     background: #fcfcfc;
     color: black;
-  }
-  tbody tr:nth-child(even){
+}
+
+tbody tr:nth-child(even) {
     background: #dcdcdc;
     color: black;
-  }
+}
 
-  #monthlySalaryLine, h3{
+#monthlySalaryLine {
     display: flex;
     flex-direction: row;
     justify-content: right;
     color: #4b4949
-  }
+}
 
+#monthlySalaryLine h3 {
+    padding: .5em;
+}
